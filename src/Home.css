@@ -1,0 +1,123 @@
+.home-container {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(0, 64, 128, 0.8);
+  color: white;
+  position: relative;
+}
+
+/* Logo Container */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  animation: rotateLogo 3s infinite linear;
+}
+
+/* Animated Logo Name */
+.logo-name {
+  font-size: 24px;
+  font-weight: bold;
+  animation: rotateLogo 3s infinite linear,blink 1.5s infinite alternate;
+}
+
+@keyframes rotateLogo {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Navigation Buttons */
+.nav-buttons {
+  display: flex;
+}
+
+.nav-buttons .nav-btn {
+  margin: 0 10px;
+  padding: 12px 18px;
+  border: none;
+  background-color: white;
+  color: #004080;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+  animation: blink 1s infinite alternate;
+}
+
+.nav-buttons .nav-btn:hover {
+  background-color: #003366;
+  color: white;
+}
+
+/* Centered Content */
+.center-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.details-box {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  color: black;
+  animation: blink 1.5s infinite alternate;
+}
+
+/* Blinking Effect */
+@keyframes blink {
+  0% { background-color: black; color: skyblue; }
+  100% { background-color: skyblue; color: black; }
+}
+
+/* Blinking Exclusive Buttons */
+.exclusive-btn {
+  margin: 10px;
+  padding: 14px 24px;
+  font-size: 18px;
+  border: none;
+  background: linear-gradient(45deg, skyblue,darkblue);
+  color: white;
+  cursor: pointer;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+  animation: blink 1s infinite alternate;
+}
+
+.exclusive-btn:hover {
+  background: linear-gradient(45deg, skyblue,darkblue);
+  transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+  padding: 15px;
+  background-color: rgba(0, 64, 128, 0.8);
+  color: white;
+  text-align: center;
+  animation: blink 1.5s infinite alternate;
+}
